@@ -1,0 +1,289 @@
+:root{
+    --main-blue: #121f3d;
+    --ligth-blue: #24385b;
+    --accent-blue: #33b1ff;
+    --grey-blue: #637b9d;
+    --black: #171717;
+    --main-green: #95ca3e;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    background-color: var(--main-blue);
+    color: white;
+    font-size: 1.6rem;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 1.8rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+.main-nav{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main-nav .main-nav_item{
+    padding: 15px;
+}
+
+.main-nav_item:nth-child(3){
+    margin-right: 20px;
+}
+
+main{
+    height: 100vh;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;   
+}
+
+.ejercicio{
+   margin-top: 60px;
+   max-width: 1180px;
+}
+
+.titulo-ejercicio{
+    text-align: center;
+}
+
+.ejercicio-card{
+    background-color: var(--ligth-blue);
+    padding: 20px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    min-width: 1250px;
+}
+
+.ejercicio-in-out{
+    display: none;
+}
+
+.ejercicio-active{
+    display: flex;
+}
+
+.ejercicio-selector{
+    grid-area: nav;
+    place-self: center;
+    display: flex;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.selector-figura{
+    margin: 0 20px;
+    min-width: 80px;
+    aspect-ratio: 1;
+    position: relative;
+    padding: 10px;
+    border: 2px solid transparent;
+}
+
+#cuadrado::after{
+    content: "";
+    border: 2px solid white;
+    width: 50px;
+    aspect-ratio: 1;
+    position: absolute;
+}
+
+#circulo::after{
+    position: absolute;
+    content: "";
+    border: 2px solid white;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+#triangulo::after{
+    position: absolute;
+    content: "";
+    width: 0px;
+    border-bottom: 56px solid white;
+    border-left: 28px solid transparent;
+    border-right: 28px solid transparent;
+    z-index: 50;
+}
+#triangulo::before{
+    position: absolute;
+    content: "";
+    width: 0px;
+    border-bottom: 50px solid var(--ligth-blue);
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    z-index: 55;
+    top: 14px;
+    left: 13px;
+}
+
+.ejercicio-inputs{
+    width: 80%;
+    justify-self: center;
+    align-self: flex-start;
+    padding: 10px;
+    min-height: 180px;
+}
+.ejercicio-descripcion{
+    padding: 20px 0;
+}
+
+.ejercicio-inputs_medidas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    min-height: 190px;
+}
+.inputs_medidas-group{
+    display: flex;
+    flex-direction: column;
+}
+.inputs_medidas-group label{ 
+    padding: 5px 0;
+    margin-top: 5px;
+}
+.inputs_medidas-group input{
+    background-color: var(--main-blue);
+    border: 1px solid var(--accent-blue);
+    border-radius: 20px;
+    padding: 6px;
+    color: white;
+}
+.inputs_medidas-group input:nth-child(2n){
+    margin-right: 5px;
+}
+
+.inputs_medidas-group input::placeholder{
+    color: var(--grey-blue);
+}
+
+.inputs_medidas-calcular{
+    max-height: 50px;
+    grid-column: 1/3;
+    margin-top: 10px;
+    font-size: 1.8rem;
+    background-color: var(--main-blue);
+    color: white;
+    border: 1px solid var(--main-blue);
+    padding: 5px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.inputs_medidas-calcular:hover{
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    transition: .2s all;
+}
+
+.ejercicio-ouput{
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.output-figura{
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#output-figura-triangulo::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 200px solid var(--accent-blue);
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    z-index: 50;
+}
+#output-figura-triangulo::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 190px solid var(--ligth-blue);
+    border-left: 95px solid transparent;
+    border-right: 95px solid transparent;
+    z-index: 55;
+    top: 7px;
+}
+
+#output-figura-cuadrado::after{
+    content: "";
+    width: 190px;
+    height: 190px;
+    border: 3px solid var(--accent-blue);
+}
+
+#output-figura-circulo::after{
+    content: "";
+    width: 190px;
+    height: 190px;
+    border: 3px solid var(--accent-blue);
+    border-radius: 50%;
+}
+
+.output-resultado{
+    display: flex;
+    background-color: var(--main-blue);
+    padding: 5px;
+    font-size: 1.8rem;
+    border-radius: 100vw;
+    flex-direction: column;
+    min-width: 360px;
+}
+.output-resultado div{
+    margin-left: 10px;
+}
+
+.figure-active{
+    border: 2px solid var(--accent-blue);
+    border-radius: 10px;
+}
+
+sup{
+    position: relative;
+    top: 3px;
+}

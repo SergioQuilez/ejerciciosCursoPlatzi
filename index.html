@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="main-nav">
+            <a href="" class="main-nav_item">Ejercicio 1</a>
+            <a href="" class="main-nav_item">Ejercicio 2</a>
+            <a href="" class="main-nav_item">Ejercicio 3</a>
+        </nav>
+    </header>
+    <main>
+        <section class="ejercicio">
+            <h1 class="titulo-ejercicio">Calculos Geometricos</h1>
+            <div class="ejercicio-card">
+                <div class="ejercicio-selector">
+                    <div class="selector-figura figure-active" id="cuadrado"></div>
+                    <div class="selector-figura" id="circulo"></div>
+                    <div class="selector-figura" id="triangulo"></div>
+                </div>
+                <!-- CUADRADO -->
+                <div class="ejercicio-in-out ejercicio-active" id="ejercicio-cuadrado">
+                    <div class="ejercicio-inputs">
+                        <h2 class="ejercicio-descripcion">
+                            Ingresa las medidas de tu <span>(cuadrado)</span> para calcular el área y perimetro
+                        </h2>
+                        <form action="#" class="ejercicio-inputs_medidas">
+                            <div class="inputs_medidas-group">
+                                <label for="triangulo_base">Lado del cuadrado</label>
+                                <input type="number" id="lado-cuadrado" placeholder="Lado del cuadrado">
+                            </div>
+                            <input type="submit" value="Calcular" class="inputs_medidas-calcular" id="calcular-ciadrado" onclick="calcularCuadrado()">
+                        </form>
+                    </div>
+                    <div class="ejercicio-ouput">
+                        <div class="output-figura" id="output-figura-cuadrado">
+                        
+                        </div>
+                        <div class="output-resultado">
+                            <div class="resultado-area">Area: <span id="areaCuadradoIs"></span></div>
+                            <div class="resultado-perimetro">Perimetro: <span id="perimetroCuadradoIs"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CIRCULO -->
+                <div class="ejercicio-in-out" id="ejercicio-circulo">
+                    
+                    <div class="ejercicio-inputs">
+                        <h2 class="ejercicio-descripcion">
+                            Ingresa las medidas de tu <span>(circulo)</span> para calcular el área y perimetro
+                        </h2>
+                        <form action="#" class="ejercicio-inputs_medidas">
+                            <div class="inputs_medidas-group">
+                                <label for="triangulo_base">Radio</label>
+                                <input type="number" id="radio-circulo" placeholder="Radio del triangulo">
+                            </div>
+                            <input type="submit" value="Calcular" class="inputs_medidas-calcular" id="calcular-circulo" onclick="calcularCirculo()">
+                        </form>
+                    </div>
+                    <div class="ejercicio-ouput">
+                        <div class="output-figura" id="output-figura-circulo">
+                        
+                        </div>
+                        <div class="output-resultado">
+                            <div class="resultado-area">Area: <span id="areaCirculoIs"></span></div>
+                            <div class="resultado-perimetro">Perimetro: <span id="perimetroCirculoIs"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- TRIANGULO -->
+                <div class="ejercicio-in-out" id="ejercicio-triangulo">
+                    <div class="ejercicio-inputs">
+                        <h2 class="ejercicio-descripcion">
+                            Ingresa las medidas de tu <span>(triangulo)</span> para calcular el área y perimetro
+                        </h2>
+                        <form action="#" class="ejercicio-inputs_medidas">
+                            <div class="inputs_medidas-group">
+                                <label for="triangulo_altura">Altura</label>
+                                <input type="number" id="triangulo_altura" placeholder="Altura del triangulo" >
+                            </div>
+                            <div class="inputs_medidas-group">
+                                <label for="triangulo_ladoA">Lado a</label>
+                                <input type="number" id="triangulo_ladoA" placeholder="Largo del lado A" > 
+                            </div>
+                            <div class="inputs_medidas-group">
+                                <label for="triangulo_ladoB">Lado b</label>
+                                <input type="number" id="triangulo_ladoB" placeholder="Largo del lado B"> 
+                            </div>
+                            <div class="inputs_medidas-group">
+                                <label for="triangulo_base">Base</label>
+                                <input type="number" id="triangulo_base" placeholder="Largo de la base">
+                            </div>
+                            <input type="submit" value="Calcular" class="inputs_medidas-calcular" onclick="calcularTriangulo()">
+                        </form>
+                    </div>
+                    <div class="ejercicio-ouput">
+                        <div class="output-figura" id="output-figura-triangulo">
+                        
+                        </div>
+                        <div class="output-resultado">
+                            <div class="resultado-area">Area: <span id="areaTrianguloIs"></span></div>
+                            <div class="resultado-perimetro">Perimetro: <span id="perimetroTrianguloIs"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<script src="/main.js"></script>
+</body>
+</html>
